@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach((link)=>{
   });
 // ===== 스크롤 위치에 따라 active 표시 =====
 
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section, header");
 const dots = document.querySelectorAll(".side-nav .dot");
 
 window.addEventListener("scroll", () => {
