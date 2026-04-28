@@ -1,20 +1,33 @@
-const cards = document.querySelectorAll(".card, .project-card");
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("nav");
 
-cards.forEach((card) => {
-  card.addEventListener("mouseenter", () => {
-    card.style.transform = "translateY(-8px)";
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "translateY(0)";
-  });
+menuBtn.addEventListener("click", () => {
+  nav.classList.toggle("active");
 });
 
 const navLinks = document.querySelectorAll(".nav a");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    navLinks.forEach((item) => item.classList.remove("active"));
-    link.classList.add("active");
+    nav.classList.remove("active");
   });
+});
+
+const sections = document.querySelectorAll(".section");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold: 0.18,
+  }
+);
+
+sections.forEach((section) => {
+  observer.observe(section);
 });
