@@ -129,3 +129,74 @@ footer a{display:inline-block;margin-top:10px;color:#ff8a00;font-weight:900;}
       margin:0 auto;
     }
   }
+/* ===== HERO 첫 화면 정리 ===== */
+
+.hero-card{
+    padding:50px;
+  }
+  
+  /* 기존 hero h1 크기 덮어쓰기 */
+  .hero h1{
+    font-size:clamp(42px,5vw,72px);
+    line-height:1.05;
+    letter-spacing:-2px;
+    margin-bottom:18px;
+    font-weight:800;
+    color:#f4f4f4;
+  }
+  
+  /* DESIGN PORTFOLIO */
+  .badge{
+    font-size:16px;
+    letter-spacing:4px;
+    color:#ff8a00;
+    margin-bottom:22px;
+  }
+  
+  /* 설명문 */
+  .hero-sub{
+    font-size:18px;
+    line-height:1.65;
+    color:#dddddd;
+    font-weight:600;
+  }
+  
+  /* 방혜은 · Graphic Designer 강조만 오렌지 */
+  .hero-sub:first-line{
+    color:#ff8a00;
+    font-weight:900;
+  }
+  
+  /* 정보칩 작고 깔끔하게 */
+  .info-list{
+    margin:28px 0 30px;
+    gap:12px;
+  }
+  
+  .info-list span{
+    font-size:14px;
+    padding:10px 16px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+  }
+  
+  /* 버튼 살짝 줄이기 */
+  .btn{
+    min-width:145px;
+    padding:13px 24px;
+  }
+  
+  /* 모바일 */
+  @media(max-width:900px){
+    .hero-card{
+      padding:34px;
+    }
+  
+    .hero h1{
+      font-size:42px;
+    }
+  
+    .hero-sub{
+      font-size:16px;
+    }
+  }
