@@ -679,7 +679,7 @@ footer a{display:inline-block;margin-top:10px;color:#ff8a00;font-weight:900;}
     align-items:center;
     justify-content:center;
   
-    background:#111;
+    background:#6b4f3f;
   
     max-width:420px;   /* 🔥 핵심 추가 */
     margin:0 auto;     /* 🔥 가운데 정렬 */
@@ -711,4 +711,419 @@ footer a{display:inline-block;margin-top:10px;color:#ff8a00;font-weight:900;}
     .package-image img{
       max-height:none;
     }
+  }
+  .monkit-box{
+    position:relative;
+    height:320px;
+    border-radius:28px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(255,145,20,.55);
+}
+
+.monkit-bg{
+    position:absolute;
+    inset:0;
+    background-image:url("images/box/main.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    filter:blur(4px) brightness(0.55);
+    transform:scale(1.1);
+}
+
+.monkit-text{
+    position:relative;
+    z-index:2;
+    font-size:48px;
+    font-weight:900;
+    color:#fff;
+}
+/* ===== UX/UI readability + subtle animation upgrade ===== */
+
+section{
+    padding:140px 0;
+  }
+  
+  .section-title{
+    margin-bottom:24px;
+  }
+  
+  .section-desc{
+    margin-bottom:58px;
+    line-height:1.9;
+    color:#e2e2e2;
+  }
+  
+  /* Profile 가독성 개선 */
+  #profile{
+    background:
+      radial-gradient(circle at 15% 20%,rgba(255,138,0,0.13),transparent 32%),
+      linear-gradient(180deg,#050505,#0b0806);
+  }
+  
+  .profile-wrap{
+    gap:72px;
+    align-items:center;
+  }
+  
+  .profile-text{
+    gap:28px;
+  }
+  
+  .profile-text .card{
+    padding:34px;
+    border-radius:30px;
+    background:linear-gradient(135deg,rgba(255,255,255,0.08),rgba(255,255,255,0.035));
+  }
+  
+  .profile-text .card p{
+    font-size:17px;
+    line-height:1.95;
+  }
+  
+  .profile-image-box{
+    max-width:360px;
+    border-radius:30px;
+    position:relative;
+    transform:rotate(1.2deg);
+    transition:0.45s ease;
+  }
+  
+  .profile-image-box::after{
+    content:"";
+    position:absolute;
+    inset:14px;
+    border-radius:24px;
+    border:1px solid rgba(255,255,255,0.18);
+    pointer-events:none;
+  }
+  
+  .profile-image-box:hover{
+    transform:translateY(-10px) rotate(0deg);
+    box-shadow:
+      0 34px 90px rgba(0,0,0,0.65),
+      0 0 42px rgba(255,138,0,0.22);
+  }
+  
+  /* Monkit 패키지 박스 업그레이드 */
+  .monkit-box{
+    min-height:420px;
+    height:auto;
+    position:relative;
+    border-radius:34px;
+    overflow:hidden;
+    border:1px solid rgba(255,180,120,0.5);
+    box-shadow:
+      0 35px 100px rgba(0,0,0,0.55),
+      inset 0 0 40px rgba(255,255,255,0.06);
+  }
+  
+  .monkit-bg{
+    position:absolute;
+    inset:0;
+    background-image:url("images/box/main.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    filter:blur(2.5px) brightness(0.58) saturate(1.1);
+    transform:scale(1.05);
+    transition:0.7s ease;
+  }
+  
+  .monkit-box::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:
+      linear-gradient(135deg,rgba(78,47,48,0.72),rgba(78,47,48,0.12)),
+      radial-gradient(circle at 50% 40%,rgba(255,180,120,0.22),transparent 45%);
+  }
+
+  .monkit-box::after{
+    content:"";
+    position:absolute;
+    inset:18px;
+    z-index:2;
+    border-radius:26px;
+    border:none; /* ← 핵심 */
+    box-shadow:inset 0 0 28px rgba(255,255,255,0.08);
+    pointer-events:none;
+  }
+  
+  .monkit-text{
+    position:relative;
+    z-index:3;
+    font-size:clamp(38px,5vw,64px);
+    font-weight:1000;
+    letter-spacing:3px;
+    color:#fff;
+    text-align:center;
+    text-shadow:
+      0 6px 18px rgba(0,0,0,0.65),
+      0 0 24px rgba(255,190,130,0.38);
+  }
+  
+  .monkit-box:hover .monkit-bg{
+    transform:scale(1.1);
+    filter:blur(1.5px) brightness(0.68) saturate(1.18);
+  }
+  
+  /* 스크롤 등장 애니메이션 */
+  .reveal{
+    opacity:0;
+    transform:translateY(34px);
+    filter:blur(8px);
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s ease,
+      filter 0.8s ease;
+  }
+  
+  .reveal.show{
+    opacity:1;
+    transform:translateY(0);
+    filter:blur(0);
+  }
+  
+  .reveal.delay-1{transition-delay:0.08s;}
+  .reveal.delay-2{transition-delay:0.16s;}
+  .reveal.delay-3{transition-delay:0.24s;}
+  
+  @media(max-width:900px){
+    section{
+      padding:92px 0;
+    }
+  
+    .profile-wrap{
+      gap:36px;
+    }
+  
+    .profile-text .card{
+      padding:26px;
+    }
+  
+    .monkit-box{
+      min-height:300px;
+    }
+  
+    .monkit-text{
+      font-size:34px;
+    }
+  }
+
+
+.wide-card{
+    margin-top:30px;
+}
+
+.final-card{
+    margin-top:30px;
+    border-color:rgba(180,106,85,.5);
+}
+
+@media(max-width:900px){
+    .image-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cup-text{
+        font-size:38px;
+    }
+}
+
+  .project-section.verotio{
+    background:linear-gradient(180deg,#050505,#160d09);
+  }
+  
+/* ===== Verotio Cup Holder : Monkit Package Style 통일본 ===== */
+
+.project-section.verotio{
+    background:linear-gradient(180deg,#050505,#160d09);
+  }
+  
+  /* 상단 컵홀더 비주얼 - Monkit 박스와 동일한 느낌 */
+  .cup-holder-visual{
+    min-height:420px;
+    height:auto;
+    position:relative;
+    border-radius:34px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    border:1px solid rgba(255,180,120,0.5);
+    box-shadow:
+      0 35px 100px rgba(0,0,0,0.55),
+      inset 0 0 40px rgba(255,255,255,0.06);
+  }
+  
+  .cup-holder-bg{
+    position:absolute;
+    inset:0;
+    background-image:url("images/cup/main.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    filter:blur(2.5px) brightness(0.58) saturate(1.1);
+    transform:scale(1.05);
+    transition:0.7s ease;
+  }
+  
+  .cup-holder-visual::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:
+      linear-gradient(135deg,rgba(180,106,85,0.72),rgba(78,47,48,0.12)),
+      radial-gradient(circle at 50% 40%,rgba(255,180,120,0.22),transparent 45%);
+  }
+  
+  .cup-holder-visual::after{
+    content:"";
+    position:absolute;
+    inset:18px;
+    z-index:2;
+    border-radius:26px;
+    border:none;
+    box-shadow:inset 0 0 28px rgba(255,255,255,0.08);
+    pointer-events:none;
+  }
+  
+  .cup-holder-text{
+    position:relative;
+    z-index:3;
+    font-size:clamp(38px,5vw,64px);
+    font-weight:1000;
+    letter-spacing:3px;
+    line-height:1.05;
+    color:#fff;
+    text-align:center;
+    text-shadow:
+      0 6px 18px rgba(0,0,0,0.65),
+      0 0 24px rgba(255,190,130,0.38);
+  }
+  
+  .cup-holder-visual:hover .cup-holder-bg{
+    transform:scale(1.1);
+    filter:blur(1.5px) brightness(0.68) saturate(1.18);
+  }
+  
+  /* 컵홀더 결과물 영역 - 패키지 결과물과 동일한 카드 구조 */
+  .cup-holder-showcase{
+    margin-top:64px;
+    display:flex;
+    flex-direction:column;
+    gap:34px;
+  }
+  
+  .cup-holder-row{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:28px;
+    align-items:center;
+    padding:24px;
+    border-radius:28px;
+    background:rgba(255,255,255,0.045);
+    border:1px solid rgba(255,255,255,0.11);
+    box-shadow:0 24px 80px rgba(0,0,0,0.38);
+  }
+  
+  .cup-holder-row.reverse .cup-holder-image{
+    order:2;
+  }
+  
+  .cup-holder-row.reverse .cup-holder-desc{
+    order:1;
+  }
+  
+  .cup-holder-image{
+    max-width:420px;
+    min-height:320px;
+    margin:0 auto;
+    border-radius:22px;
+    overflow:hidden;
+    background:#6b4f3f;
+    border:1px solid rgba(255,255,255,0.12);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  .cup-holder-image img{
+    width:100%;
+    height:auto;
+    max-height:520px;
+    object-fit:contain;
+    object-position:center;
+    display:block;
+    transition:none;
+  }
+
+  .cup-holder-row:hover .cup-holder-image img{
+    transform:scale(1.04);
+  }
+  
+  .cup-holder-desc span{
+    display:inline-block;
+    margin-bottom:10px;
+    color:#ff9a22;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2.5px;
+  }
+  
+  .cup-holder-desc h4{
+    font-size:26px;
+    margin-bottom:14px;
+    color:#fff;
+  }
+  
+  .cup-holder-desc p{
+    color:#d8d8d8;
+    font-size:16px;
+    line-height:1.85;
+  }
+  
+  /* 컵홀더 컬러 시스템도 Monkit과 톤 통일 */
+  .cup-color-system{
+    background:
+      linear-gradient(135deg,rgba(180,106,85,0.32),rgba(255,255,255,0.045)),
+      rgba(255,255,255,0.045);
+  }
+  
+  /* 모바일 */
+  @media(max-width:900px){
+    .cup-holder-visual{
+      min-height:300px;
+    }
+  
+    .cup-holder-text{
+      font-size:34px;
+    }
+  
+    .cup-holder-row,
+    .cup-holder-row.reverse{
+      grid-template-columns:1fr;
+    }
+  
+    .cup-holder-row.reverse .cup-holder-image,
+    .cup-holder-row.reverse .cup-holder-desc{
+      order:initial;
+    }
+  
+    .cup-holder-image{
+      min-height:auto;
+    }
+  }
+  .cup-holder-row:hover,
+  .cup-holder-row:hover .cup-holder-image img{
+    transform:none !important;
+    box-shadow:none !important;
+    filter:none !important;
   }
