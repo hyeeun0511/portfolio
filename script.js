@@ -1,26 +1,25 @@
 const sections = document.querySelectorAll("header[id], section[id]");
-const dots = document.querySelectorAll(".side-nav .dot");
+const navLinks = document.querySelectorAll(".side-nav .side-link");
 
-function setActiveDot(id) {
-  dots.forEach((dot) => {
-    dot.classList.remove("active");
+function setActiveNav(id) {
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
 
-    if (dot.getAttribute("href") === `#${id}`) {
-      dot.classList.add("active");
+    if (link.getAttribute("href") === `#${id}`) {
+      link.classList.add("active");
     }
   });
 }
 
-/* 클릭했을 때 바로 색 유지 */
-dots.forEach((dot) => {
-  dot.addEventListener("click", (e) => {
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
 
-    const targetId = dot.getAttribute("href").replace("#", "");
+    const targetId = link.getAttribute("href").replace("#", "");
     const target = document.getElementById(targetId);
 
     if (target) {
-      setActiveDot(targetId);
+      setActiveNav(targetId);
       target.scrollIntoView({
         behavior: "smooth",
         block: "start"
@@ -29,7 +28,6 @@ dots.forEach((dot) => {
   });
 });
 
-/* 스크롤 위치에 따라 active 변경 */
 window.addEventListener("scroll", () => {
   let currentId = "top";
 
@@ -41,8 +39,7 @@ window.addEventListener("scroll", () => {
     }
   });
 
-  setActiveDot(currentId);
+  setActiveNav(currentId);
 });
 
-/* 처음 들어왔을 때 첫 번째 dot active */
-setActiveDot("top");
+setActiveNav("top");
