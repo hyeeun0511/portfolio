@@ -1,3 +1,10 @@
+#nextdebut.project-section.game{
+  background:pink !important;
+}
+
+#momslog.project-section.pink{
+  background:lavender !important;
+}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:Arial,"Pretendard",sans-serif;background:#050505;color:#fff;line-height:1.7;}
