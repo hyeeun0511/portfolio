@@ -1,27 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("header[id], section[id]");
-    const sideLinks = document.querySelectorAll(".side-nav .side-link");
+    const links = document.querySelectorAll(".side-link");
   
-    function setActive(id) {
-      sideLinks.forEach((link) => {
+    function setActive(id){
+      links.forEach(link=>{
         link.classList.remove("active");
-  
-        if (link.getAttribute("href") === "#" + id) {
+        if(link.getAttribute("href") === "#" + id){
           link.classList.add("active");
         }
       });
     }
   
-    sideLinks.forEach((link) => {
-      link.addEventListener("click", (e) => {
+    links.forEach(link=>{
+      link.addEventListener("click",(e)=>{
         e.preventDefault();
   
-        const targetId = link.getAttribute("href").replace("#", "");
-        const target = document.getElementById(targetId);
+        const id = link.getAttribute("href").replace("#","");
+        const target = document.getElementById(id);
   
-        if (!target) return;
+        if(!target) return;
   
-        setActive(targetId);
+        setActive(id);
   
         window.scrollTo({
           top: target.offsetTop,
@@ -30,16 +29,16 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   
-    window.addEventListener("scroll", () => {
-      let currentId = "top";
+    window.addEventListener("scroll",()=>{
+      let current = "top";
   
-      sections.forEach((section) => {
-        if (window.scrollY >= section.offsetTop - 260) {
-          currentId = section.id;
+      sections.forEach(section=>{
+        if(window.scrollY >= section.offsetTop - 250){
+          current = section.id;
         }
       });
   
-      setActive(currentId);
+      setActive(current);
     });
   
     setActive("top");
