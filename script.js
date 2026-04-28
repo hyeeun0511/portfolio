@@ -43,24 +43,25 @@ document.addEventListener("DOMContentLoaded", () => {
   
     setActive("top");
 
-    const moodSections = document.querySelectorAll("#nextdebut, #momslog");
-
-    function updatePageMood(){
-    let brightMode = false;
-
-    moodSections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-
-        if(rect.top < window.innerHeight * 0.55 && rect.bottom > window.innerHeight * 0.25){
-        brightMode = true;
-        }
-    });
-
-    document.body.classList.toggle("bright-mood", brightMode);
-    }
-
-    window.addEventListener("scroll", updatePageMood);
-    updatePageMood();
+    function updateGradientTransition(){
+        const verotio = document.getElementById("verotio");
+        const next = document.getElementById("nextdebut");
+      
+        if(!verotio || !next) return;
+      
+        const start = verotio.offsetTop + verotio.offsetHeight - window.innerHeight;
+        const end = next.offsetTop;
+      
+        const scrollY = window.scrollY;
+      
+        let progress = (scrollY - start) / (end - start);
+        progress = Math.max(0, Math.min(1, progress));
+      
+        document.body.style.setProperty("--scroll-progress", progress);
+      }
+      
+      window.addEventListener("scroll", updateGradientTransition);
+      updateGradientTransition();
 
     const revealItems = document.querySelectorAll(
         "#profile .section-title, #profile .section-desc, #profile .card, #profile .profile-image-box, #monkit .split, #monkit .detail-grid, #monkit .color-system-box, #monkit .package-showcase, #verotio .split, #verotio .detail-grid, #verotio .result-box, #verotio .cup-holder-showcase, #verotio .color-system-box"
