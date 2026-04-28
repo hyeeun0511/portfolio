@@ -266,19 +266,6 @@ footer a{display:inline-block;margin-top:10px;color:#ff8a00;font-weight:900;}
     animation:heroFadeUp 0.85s ease forwards;
     animation-delay:0.95s;
   }
-
-  /* ===== 프로필 이미지 위치 + 모바일 최적화 ===== */
-
-.profile-wrap{
-    align-items:flex-start;
-  }
-  
-  .profile-image-box{
-    margin-top:-20px;
-    box-shadow:
-      0 30px 80px rgba(0,0,0,0.6),
-      0 0 0 1px rgba(255,255,255,0.08);
-  }
   
 /* ===== 아이콘 사이드 네비 최종 ===== */
 
@@ -380,10 +367,13 @@ footer a{display:inline-block;margin-top:10px;color:#ff8a00;font-weight:900;}
       display:none;
     }
   }
-/* ===== Profile 이미지와 Skills 박스 하단 맞춤 ===== */
+/* ===== Profile 하단 정렬 최종 ===== */
 
 .profile-wrap{
-    align-items:start;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:40px;
+    align-items:end;
   }
   
   .profile-text{
@@ -393,10 +383,19 @@ footer a{display:inline-block;margin-top:10px;color:#ff8a00;font-weight:900;}
   }
   
   .profile-image-box{
-    max-width:330px;
-    height:435px;
-    margin-top:0;
+    width:100%;
+    max-width:360px;
+    aspect-ratio:4/5;
+    height:auto;
+    margin:0 auto;
     align-self:end;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.12);
+    background:#111;
+    box-shadow:
+      0 30px 80px rgba(0,0,0,0.6),
+      0 0 0 1px rgba(255,255,255,0.08);
   }
   
   .profile-image-box img{
@@ -404,15 +403,21 @@ footer a{display:inline-block;margin-top:10px;color:#ff8a00;font-weight:900;}
     height:100%;
     object-fit:cover;
     object-position:center top;
+    display:block;
   }
   
-  /* 모바일에서는 다시 자연스럽게 */
   @media(max-width:900px){
+    .profile-wrap{
+      grid-template-columns:1fr;
+      align-items:center;
+      gap:28px;
+      text-align:left;
+    }
+  
     .profile-image-box{
+      order:-1;
       max-width:280px;
-      height:auto;
-      aspect-ratio:4/5;
-      margin:0 auto 20px;
+      margin:0 auto 18px;
       align-self:center;
     }
   }
