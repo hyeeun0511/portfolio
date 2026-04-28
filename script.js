@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("header[id], section[id]");
-    const sideLinks = document.querySelectorAll(".side-nav .side-link");
+    const sideLinks = document.querySelectorAll(".side-nav .side-item");
   
     function setActive(id) {
       sideLinks.forEach((link) => {
