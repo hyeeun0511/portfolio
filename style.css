@@ -80,7 +80,7 @@ footer a{display:inline-block;margin-top:10px;color:#ff8a00;font-weight:900;}
     display:grid;
     grid-template-columns:1.1fr 0.9fr;
     gap:40px;
-    align-items:stretch; /* 🔥 핵심 */
+    align-items:end; /* 🔥 핵심: bottom 정렬 */
   }
   
   /* 텍스트 */
