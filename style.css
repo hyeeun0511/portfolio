@@ -307,9 +307,7 @@ footer a{display:inline-block;margin-top:10px;color:#ff8a00;font-weight:900;}
     color:#050505;
     background:linear-gradient(135deg,#ff8500,#ffb000);
     border-color:rgba(255,138,0,0.95);
-    box-shadow:
-      0 0 18px rgba(255,138,0,0.65),
-      0 12px 36px rgba(0,0,0,0.45);
+    box-shadow:0 0 18px rgba(255,138,0,0.65);
   }
   
   .side-link::after{
