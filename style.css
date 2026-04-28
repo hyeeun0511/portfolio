@@ -265,3 +265,45 @@ footer a{display:inline-block;margin-top:10px;color:#ff8a00;font-weight:900;}
     animation:heroFadeUp 0.85s ease forwards;
     animation-delay:0.95s;
   }
+/* ===== 오른쪽 사이드 네비 ===== */
+
+.side-nav{
+    position:fixed;
+    right:24px;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    z-index:999;
+  }
+  
+  /* 점 */
+  .side-nav .dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:rgba(255,255,255,0.3);
+    transition:0.3s;
+    position:relative;
+  }
+  
+  /* hover */
+  .side-nav .dot:hover{
+    background:#ff8a00;
+    transform:scale(1.4);
+  }
+  
+  /* 현재 위치 */
+  .side-nav .dot.active{
+    background:#ff8a00;
+    box-shadow:0 0 10px rgba(255,138,0,0.7);
+    transform:scale(1.6);
+  }
+  
+  /* 반응형 */
+  @media(max-width:900px){
+    .side-nav{
+      right:12px;
+    }
+  }
