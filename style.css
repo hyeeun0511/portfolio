@@ -1380,3 +1380,172 @@ section{
     color:#7b6677;
   }
   .portfolio-notice{margin-top:16px;color:#7b6677;font-size:13px;line-height:1.7;font-weight:600;opacity:0.88;}
+  #nextdebut .next-visual{
+    position:relative;
+    min-height:420px;
+    overflow:hidden;
+    border-radius:34px;
+    background:#120914 !important;
+    border:1px solid rgba(214,150,210,0.5) !important;
+    box-shadow:0 35px 100px rgba(170,110,160,0.28), inset 0 0 40px rgba(255,255,255,0.06) !important;
+  }
+  
+  #nextdebut .next-bg{
+    position:absolute;
+    inset:0;
+    background-image:url("images/next_debut/main.jpg");
+    background-size:cover;
+    background-position:center;
+    transform:scale(1.08);
+    filter:blur(2.5px) brightness(0.58) saturate(1.15);
+    transition:0.7s ease;
+  }
+  
+  #nextdebut .next-visual::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:linear-gradient(135deg,rgba(255,210,238,0.2),rgba(120,50,120,0.42));
+  }
+  
+  #nextdebut .next-visual::after{
+    content:"";
+    position:absolute;
+    inset:18px;
+    z-index:2;
+    border-radius:26px;
+    border:1px solid rgba(255,255,255,0.08);
+    box-shadow:inset 0 0 24px rgba(255,255,255,0.06);
+    pointer-events:none;
+  }
+  
+  #nextdebut .next-text{
+    position:relative;
+    z-index:3;
+    font-size:clamp(52px,6vw,86px);
+    line-height:0.92;
+    font-weight:1000;
+    letter-spacing:-3px;
+    text-align:center;
+    color:#fff;
+    text-shadow:0 10px 24px rgba(0,0,0,0.55), 0 0 28px rgba(255,180,220,0.35);
+  }
+  
+  #nextdebut .next-visual:hover .next-bg{
+    transform:scale(1.14);
+    filter:blur(1.5px) brightness(0.68) saturate(1.22);
+  }
+  /* =========================
+   NEXT DEBUT VISUAL FINAL
+========================= */
+
+#nextdebut .next-visual{
+  position:relative !important;
+
+  height:430px !important;
+
+  overflow:hidden !important;
+
+  border-radius:34px !important;
+
+  background:#120914 !important;
+
+  border:1px solid rgba(255,255,255,0.08) !important;
+
+  box-shadow:
+    0 30px 90px rgba(186,120,170,0.28),
+    inset 0 0 30px rgba(255,255,255,0.04) !important;
+
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+/* 배경 이미지 */
+#nextdebut .next-bg{
+  position:absolute;
+  inset:0;
+
+  background-image:url("images/next_debut/main.jpg");
+
+  background-size:cover;
+  background-position:center;
+
+  transform:scale(1.08);
+
+  filter:
+    blur(2px)
+    brightness(0.45)
+    saturate(1.2);
+
+  z-index:0;
+}
+
+/* 핑크/보라 오버레이 */
+#nextdebut .next-visual::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,220,240,0.14),
+      rgba(120,40,120,0.46)
+    );
+
+  z-index:1;
+}
+
+/* 유리라인 */
+#nextdebut .next-visual::after{
+  content:"";
+
+  position:absolute;
+  inset:18px;
+
+  border-radius:24px;
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  box-shadow:
+    inset 0 0 20px rgba(255,255,255,0.05);
+
+  z-index:2;
+}
+
+/* 텍스트 */
+#nextdebut .next-text{
+  position:relative;
+  z-index:3;
+
+  color:#fff;
+
+  text-align:center;
+
+  font-size:clamp(60px,6vw,92px);
+
+  font-weight:1000;
+
+  line-height:0.9;
+
+  letter-spacing:-4px;
+
+  text-shadow:
+    0 10px 30px rgba(0,0,0,0.5),
+    0 0 40px rgba(255,180,220,0.3);
+}
+
+/* hover */
+#nextdebut .next-visual:hover .next-bg{
+  transform:scale(1.12);
+
+  filter:
+    blur(1px)
+    brightness(0.58)
+    saturate(1.28);
+
+  transition:0.6s ease;
+}
