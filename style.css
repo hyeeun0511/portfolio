@@ -1608,3 +1608,20 @@ section{
   line-height:1.7;
   font-weight:700;
 }
+.next-link-row{
+  display:flex !important;
+  align-items:center !important;
+  gap:18px !important;
+  margin-top:-10px !important;
+  margin-bottom:34px !important;
+  flex-wrap:wrap !important;
+}
+
+.next-link-row .next-link{
+  margin:0 !important;
+}
+
+.next-link-row .portfolio-notice{
+  margin:0 !important;
+  max-width:620px;
+}
