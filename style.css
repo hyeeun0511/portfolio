@@ -1330,3 +1330,31 @@ section{
     filter:none !important;
     opacity:1 !important;
   }
+  .next-link{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  
+    margin-top:-10px;
+    margin-bottom:34px;
+  
+    padding:12px 18px;
+    border-radius:999px;
+  
+    background:rgba(255,255,255,0.72);
+    border:1px solid rgba(214,150,210,0.45);
+  
+    color:#8b4f9e;
+    font-weight:800;
+    font-size:14px;
+  
+    box-shadow:0 10px 30px rgba(170,110,160,0.18);
+  
+    transition:0.25s ease;
+  }
+  
+  .next-link:hover{
+    transform:translateY(-3px);
+    background:linear-gradient(135deg,#ffd6ef,#f2dfff);
+    box-shadow:0 16px 34px rgba(170,110,160,0.28);
+  }
