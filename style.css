@@ -1358,3 +1358,24 @@ section{
     background:linear-gradient(135deg,#ffd6ef,#f2dfff);
     box-shadow:0 16px 34px rgba(170,110,160,0.28);
   }
+  .next-link{
+    display:inline-flex;
+    flex-direction:column;
+    align-items:flex-start;
+    margin-top:-10px;
+    margin-bottom:34px;
+    padding:14px 20px;
+    border-radius:18px;
+    background:rgba(255,255,255,0.72);
+    border:1px solid rgba(214,150,210,0.45);
+    color:#8b4f9e;
+    font-weight:900;
+    box-shadow:0 10px 30px rgba(170,110,160,0.18);
+  }
+  
+  .next-link span{
+    margin-top:2px;
+    font-size:12px;
+    font-weight:600;
+    color:#7b6677;
+  }
