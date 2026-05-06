@@ -1232,105 +1232,8 @@ section{
     color:#5a2f50 !important;
     text-shadow:0 0 22px rgba(255,170,220,0.7) !important;
   }
-/* ===== Verotio → NEXT DEBUT 진짜 자연스러운 전환 ===== */
 
-#verotio.project-section.verotio{
-    padding-bottom:260px !important;
-    background:
-      linear-gradient(
-        180deg,
-        #050505 0%,
-        #160d09 58%,
-        #1b0f0d 78%,
-        #321b27 92%,
-        #5b314f 100%
-      ) !important;
-  }
-  
-  #nextdebut.project-section.game{
-    position:relative;
-    overflow:hidden;
-    margin-top:-1px;
-    padding-top:520px !important;
-    background:
-      linear-gradient(
-        180deg,
-        #5b314f 0%,
-        #6d3d62 14%,
-        #87557d 28%,
-        #ad7fa6 46%,
-        #d9b6d8 66%,
-        #f4e5f4 84%,
-        #fff7fb 100%
-      ) !important;
-  }
-  
-  #nextdebut.project-section.game::before{
-    content:"";
-    position:absolute;
-    left:0;
-    right:0;
-    top:0;
-    height:520px;
-    pointer-events:none;
-    z-index:1;
-    background:
-      radial-gradient(circle at 70% 16%,rgba(255,190,225,0.28),transparent 36%),
-      radial-gradient(circle at 22% 30%,rgba(215,205,255,0.22),transparent 42%);
-    animation:debutSoftGlow 5.5s ease-in-out infinite alternate;
-  }
-  
-  #nextdebut .wrap{
-    position:relative;
-    z-index:2;
-  }
-  
-  @keyframes debutSoftGlow{
-    from{
-      opacity:0.55;
-      transform:translateY(-20px) scale(1);
-    }
-    to{
-      opacity:0.95;
-      transform:translateY(28px) scale(1.04);
-    }
-  }
-/* ===== 스크롤 기반 색 변화 ===== */
 
-:root{
-    --scroll-progress:0;
-  }
-  
-  /* NEXT DEBUT 배경 */
-  #nextdebut.project-section.game{
-    background:
-      linear-gradient(
-        180deg,
-        rgb(27,15,13) calc(0% + (var(--scroll-progress) * 10%)),
-        rgb(60,30,50) calc(20% + (var(--scroll-progress) * 10%)),
-        rgb(120,70,110) calc(40% + (var(--scroll-progress) * 10%)),
-        rgb(200,140,190) calc(65% + (var(--scroll-progress) * 10%)),
-        rgb(255,247,251) calc(100% - (1 - var(--scroll-progress)) * 20%)
-      ) !important;
-  }
-  
-  /* 전체 화면 위에 덮는 부드러운 빛 */
-  body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    pointer-events:none;
-    z-index:0;
-  
-    background:
-      linear-gradient(
-        180deg,
-        rgba(255,210,240, calc(var(--scroll-progress) * 0.6)),
-        rgba(255,240,250, calc(var(--scroll-progress) * 0.9))
-      );
-  
-    transition:0.1s linear;
-  }
   :root{
     --scroll-progress:0;
   }
@@ -1349,7 +1252,7 @@ section{
   #nextdebut.project-section.game{
     position:relative;
     overflow:hidden;
-    padding-top:360px !important;
+    padding-top:clamp(420px, 38vh, 620px) !important;
     background:
       linear-gradient(
         180deg,
@@ -1421,4 +1324,9 @@ section{
   
   .nav a{
     color:color-mix(in srgb, #dddddd calc(100% - var(--scroll-progress) * 100%), #6a3b5e calc(var(--scroll-progress) * 100%)) !important;
+  }
+  #momslog,
+  #momslog *{
+    filter:none !important;
+    opacity:1 !important;
   }

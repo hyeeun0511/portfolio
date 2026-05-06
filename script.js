@@ -49,8 +49,8 @@ document.addEventListener("DOMContentLoaded", () => {
       
         if(!verotio || !next) return;
       
-        const start = verotio.offsetTop + verotio.offsetHeight - window.innerHeight;
-        const end = next.offsetTop;
+        const start = verotio.offsetTop + verotio.offsetHeight - window.innerHeight * 2.2;
+        const end = next.offsetTop - window.innerHeight * 0.2;
       
         const scrollY = window.scrollY;
       
@@ -63,8 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
       window.addEventListener("scroll", updateGradientTransition);
       updateGradientTransition();
 
-    const revealItems = document.querySelectorAll(
-        "#profile .section-title, #profile .section-desc, #profile .card, #profile .profile-image-box, #monkit .split, #monkit .detail-grid, #monkit .color-system-box, #monkit .package-showcase, #verotio .split, #verotio .detail-grid, #verotio .result-box, #verotio .cup-holder-showcase, #verotio .color-system-box"
+      const revealItems = document.querySelectorAll(
+        "#profile .section-title, #profile .section-desc, #profile .card, #profile .profile-image-box, #monkit .split, #monkit .detail-grid, #monkit .color-system-box, #monkit .package-showcase, #verotio .split, #verotio .detail-grid, #verotio .result-box, #verotio .cup-holder-showcase, #verotio .color-system-box, #nextdebut .split, #nextdebut .flow, #nextdebut .detail-grid, #nextdebut .result-box, #momslog .section-title, #momslog .section-desc, #momslog .card"
       );
     
       revealItems.forEach((item, index) => {
