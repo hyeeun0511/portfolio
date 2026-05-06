@@ -1221,9 +1221,6 @@ section{
   }
   
   #nextdebut .next-visual{
-    background:
-      radial-gradient(circle, rgba(255,170,220,0.45), transparent 50%),
-      linear-gradient(135deg, #fff2fa, #eadfff) !important;
     border-color:rgba(214,150,210,0.5) !important;
     box-shadow:0 28px 80px rgba(170,110,160,0.24) !important;
   }
@@ -1548,4 +1545,44 @@ section{
     saturate(1.28);
 
   transition:0.6s ease;
+}
+#nextdebut .next-visual{
+  position:relative !important;
+  min-height:420px !important;
+  overflow:hidden !important;
+  border-radius:34px !important;
+  background:#120914 !important;
+  border:1px solid rgba(214,150,210,0.5) !important;
+  box-shadow:0 35px 100px rgba(170,110,160,0.28), inset 0 0 40px rgba(255,255,255,0.06) !important;
+}
+
+#nextdebut .next-bg{
+  position:absolute !important;
+  inset:0 !important;
+  background-image:url("images/next_debut/main.jpg") !important;
+  background-size:cover !important;
+  background-position:center !important;
+  transform:scale(1.08) !important;
+  filter:blur(2.5px) brightness(0.58) saturate(1.15) !important;
+  z-index:0 !important;
+}
+
+#nextdebut .next-visual::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(135deg,rgba(255,210,238,0.2),rgba(120,50,120,0.42));
+}
+
+#nextdebut .next-text{
+  position:relative;
+  z-index:3;
+  font-size:clamp(52px,6vw,86px);
+  line-height:0.92;
+  font-weight:1000;
+  letter-spacing:-3px;
+  text-align:center;
+  color:#fff;
+  text-shadow:0 10px 24px rgba(0,0,0,0.55), 0 0 28px rgba(255,180,220,0.35);
 }
