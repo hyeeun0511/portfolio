@@ -112,7 +112,6 @@ footer a{display:inline-block;margin-top:10px;color:#ff8a00;font-weight:900;}
   
   /* 살짝 고급 느낌 hover */
   .profile-image-box:hover{
-    transform:translateY(-6px);
     border-color:rgba(255,132,0,0.6);
     box-shadow:0 20px 60px rgba(0,0,0,0.6);
   }
@@ -1736,4 +1735,30 @@ section{
   justify-content:center;
 
   text-align:center;
+}
+/* NEXT DEBUT 메인 이미지 hover - 박스는 고정, 이미지만 확대 */
+#nextdebut .next-visual{
+  position:relative;
+  overflow:hidden;
+  transform:none !important;
+}
+
+#nextdebut .next-visual:hover{
+  transform:none !important;
+}
+
+#nextdebut .next-bg{
+  transition:transform 0.7s ease, filter 0.7s ease;
+  transform:scale(1.05);
+}
+
+#nextdebut .next-visual:hover .next-bg{
+  transform:scale(1.14);
+  filter:blur(2px) brightness(0.72) saturate(1.15);
+}
+
+#nextdebut .next-text{
+  position:relative;
+  z-index:3;
+  pointer-events:none;
 }
