@@ -63,7 +63,6 @@ section{padding:110px 0;}
 .detail-grid{margin-top:24px;}
 .result-box{margin-top:28px;border-color:rgba(255,132,0,.45);background:linear-gradient(135deg,rgba(255,132,0,.14),rgba(255,255,255,.05));}
 
-.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:30px;}
 .flow-item{padding:18px;border-radius:20px;background:rgba(255,132,0,.12);border:1px solid rgba(255,132,0,.35);text-align:center;font-weight:900;color:#ffd39a;}
 
 footer{padding:34px 0;text-align:center;border-top:1px solid rgba(255,255,255,.1);color:#aaa;}
@@ -1712,4 +1711,29 @@ section{
 #nextdebut .section-desc{
   font-size:20px;
   font-weight:700;
+}
+/* ===== NEXT DEBUT FLOW ALIGN FIX ===== */
+
+.flow{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:24px;
+
+  flex-wrap:wrap;
+
+  margin-top:34px;
+  width:100%;
+}
+
+.flow-item{
+  flex:1 1 210px;
+  max-width:240px;
+  min-height:74px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-align:center;
 }
