@@ -1653,3 +1653,40 @@ section{
     0 12px 32px rgba(0,0,0,0.55),
     0 0 45px rgba(255,220,245,0.65) !important;
 }
+/* NEXT DEBUT hover 강제 적용 */
+#nextdebut .next-visual{
+  transform:translateY(0) scale(1) !important;
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease !important;
+}
+
+#nextdebut .next-visual .next-bg{
+  transition:
+    transform 0.65s ease,
+    filter 0.65s ease !important;
+}
+
+#nextdebut .next-visual:hover{
+  transform:translateY(-10px) scale(1.02) !important;
+  border-color:rgba(255,230,248,0.9) !important;
+  box-shadow:
+    0 45px 120px rgba(150,70,145,0.45),
+    0 0 42px rgba(255,205,238,0.55),
+    inset 0 0 45px rgba(255,255,255,0.1) !important;
+}
+
+#nextdebut .next-visual:hover .next-bg{
+  transform:scale(1.2) !important;
+  filter:blur(0.8px) brightness(0.75) saturate(1.45) !important;
+}
+
+#nextdebut .next-visual:hover .next-text{
+  transform:scale(1.03) !important;
+  color:#fff !important;
+  text-shadow:
+    0 14px 34px rgba(0,0,0,0.6),
+    0 0 50px rgba(255,220,246,0.85) !important;
+  transition:0.45s ease !important;
+}
