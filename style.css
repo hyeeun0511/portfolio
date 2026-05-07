@@ -1954,3 +1954,40 @@ section{
 #nextdebut .next-color-system .color-point p{
   color:#5F5562 !important;
 }
+/* NEXT DEBUT COLOR SYSTEM - WHITE FINAL */
+
+#nextdebut .next-color-system{
+  background:rgba(255,255,255,0.82) !important;
+  border:1px solid rgba(201,139,195,0.25) !important;
+  box-shadow:0 24px 70px rgba(170,110,160,0.16) !important;
+}
+
+#nextdebut .next-color-system .color-label{
+  color:#C98BC3 !important;
+}
+
+#nextdebut .next-color-system .color-text h3{
+  color:#C98BC3 !important;
+}
+
+#nextdebut .next-color-system .color-summary{
+  color:#4F3D4B !important;
+}
+
+#nextdebut .next-color-system .color-point,
+#nextdebut .next-color-system .color-point.main{
+  background:rgba(255,255,255,0.72) !important;
+  border:1px solid rgba(201,139,195,0.22) !important;
+}
+
+#nextdebut .next-color-system .color-point strong{
+  color:#C98BC3 !important;
+}
+
+#nextdebut .next-color-system .color-point b{
+  color:#8E5B87 !important;
+}
+
+#nextdebut .next-color-system .color-point p{
+  color:#4F3D4B !important;
+}
