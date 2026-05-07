@@ -1925,3 +1925,32 @@ section{
   white-space:nowrap !important;
   box-shadow:none !important;
 }
+/* =========================
+   NEXT DEBUT 설명 박스 밝게
+========================= */
+
+#nextdebut .next-color-system .color-point{
+  background:rgba(255,255,255,0.72) !important;
+  border:1px solid rgba(210,185,215,0.45) !important;
+  box-shadow:none !important;
+}
+
+#nextdebut .next-color-system .color-point.main{
+  background:rgba(255,255,255,0.78) !important;
+  border-color:rgba(201,139,195,0.38) !important;
+}
+
+/* 제목 */
+#nextdebut .next-color-system .color-point strong{
+  color:#C98BC3 !important;
+}
+
+/* 코드 색 */
+#nextdebut .next-color-system .color-point b{
+  color:#8E5B87 !important;
+}
+
+/* 설명 글씨 */
+#nextdebut .next-color-system .color-point p{
+  color:#5F5562 !important;
+}
