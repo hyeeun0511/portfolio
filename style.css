@@ -2036,3 +2036,135 @@ section{
       padding:8px 12px;
   }
 }
+/* =========================
+   FIX: Monkit / Verotio 글씨 원래대로
+========================= */
+
+#monkit .color-label,
+#monkit .color-point strong,
+#monkit .package-title span,
+#monkit .package-desc span,
+#verotio .color-label,
+#verotio .color-point strong,
+#verotio .package-title span,
+#verotio .cup-holder-desc span{
+  color:#ff9a22 !important;
+}
+
+#monkit .color-text h3,
+#monkit .package-title h3,
+#monkit .package-desc h4,
+#verotio .color-text h3,
+#verotio .package-title h3,
+#verotio .cup-holder-desc h4{
+  color:#ffffff !important;
+}
+
+#monkit .color-point b,
+#verotio .color-point b{
+  color:#ffffff !important;
+}
+
+
+/* =========================
+   NEXT DEBUT COLOR SYSTEM ONLY
+   색은 유지 / 스타일만 다크 게임톤
+========================= */
+
+#nextdebut .next-color-system{
+  display:grid !important;
+  grid-template-columns:1fr 1.15fr !important;
+  gap:34px !important;
+  align-items:stretch !important;
+
+  padding:54px 44px !important;
+  border-radius:34px !important;
+
+  background:
+    radial-gradient(circle at 18% 16%, rgba(201,139,195,0.28), transparent 36%),
+    linear-gradient(135deg, rgba(36,17,31,0.92), rgba(20,9,18,0.98)) !important;
+
+  border:1px solid rgba(201,139,195,0.38) !important;
+  box-shadow:
+    0 35px 110px rgba(0,0,0,0.62),
+    inset 0 0 60px rgba(255,255,255,0.04) !important;
+
+  overflow:hidden !important;
+}
+
+#nextdebut .next-color-system::before{
+  display:none !important;
+}
+
+#nextdebut .next-color-system .color-label{
+  color:#d77acb !important;
+  letter-spacing:7px !important;
+  font-size:13px !important;
+  font-weight:900 !important;
+}
+
+#nextdebut .next-color-system .color-text h3{
+  color:#d77acb !important;
+  font-size:clamp(46px,5vw,76px) !important;
+  line-height:1.22 !important;
+  font-weight:1000 !important;
+  letter-spacing:-2px !important;
+  text-shadow:0 0 28px rgba(201,139,195,0.22) !important;
+}
+
+#nextdebut .next-color-system .color-summary{
+  color:rgba(255,255,255,0.58) !important;
+  font-size:17px !important;
+  line-height:1.9 !important;
+}
+
+#nextdebut .next-color-system .color-point{
+  background:rgba(255,255,255,0.82) !important;
+  border:1px solid rgba(255,255,255,0.28) !important;
+  border-radius:26px !important;
+  padding:28px !important;
+  box-shadow:0 22px 70px rgba(0,0,0,0.24) !important;
+}
+
+#nextdebut .next-color-system .color-point strong{
+  color:#d77acb !important;
+  font-size:26px !important;
+  font-weight:900 !important;
+}
+
+#nextdebut .next-color-system .color-point p{
+  color:#5a4d58 !important;
+  font-size:16px !important;
+  line-height:1.85 !important;
+}
+
+#nextdebut .next-color-system .color-point b{
+  color:#d77acb !important;
+  font-size:22px !important;
+}
+
+#nextdebut .next-color-system .color-bars{
+  display:grid !important;
+  grid-template-columns:repeat(5,1fr) !important;
+  gap:16px !important;
+  align-items:stretch !important;
+}
+
+#nextdebut .next-color-system .color-bar{
+  height:620px !important;
+}
+
+#nextdebut .next-color-system .bar-fill{
+  width:100% !important;
+  height:100% !important;
+  border-radius:24px !important;
+  box-shadow:
+    inset 0 0 24px rgba(255,255,255,0.14),
+    0 20px 50px rgba(0,0,0,0.35) !important;
+}
+
+#nextdebut .next-color-system .color-bar span{
+  bottom:18px !important;
+  background:rgba(0,0,0,0.58) !important;
+  color:#ffffff !important;
+}
