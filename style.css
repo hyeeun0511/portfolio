@@ -2251,3 +2251,183 @@ section{
     padding:6px 8px !important;
   }
 }
+/* =========================
+   COLOR SYSTEM FINAL FIX
+   Monkit / Verotio / NEXT DEBUT
+========================= */
+
+/* 전체 COLOR SYSTEM 제목 크기 줄이기 */
+.color-system-box .color-text h3{
+  font-size:30px !important;
+  line-height:1.35 !important;
+  letter-spacing:-0.8px !important;
+}
+
+/* COLOR SYSTEM 라벨 크기 통일 */
+.color-system-box .color-label{
+  font-size:12px !important;
+  letter-spacing:4px !important;
+}
+
+/* Monkit / Verotio는 기존 어두운 스타일 유지 */
+#monkit .color-system-box,
+#verotio .color-system-box{
+  background:
+    linear-gradient(135deg,rgba(78,47,48,0.42),rgba(255,255,255,0.045)),
+    rgba(255,255,255,0.045) !important;
+  border:1px solid rgba(154,117,111,0.35) !important;
+  box-shadow:0 28px 90px rgba(0,0,0,0.45) !important;
+}
+
+#monkit .color-label,
+#monkit .color-point strong,
+#verotio .color-label,
+#verotio .color-point strong{
+  color:#ff9a22 !important;
+}
+
+#monkit .color-text h3,
+#verotio .color-text h3,
+#monkit .color-point b,
+#verotio .color-point b{
+  color:#ffffff !important;
+}
+
+/* =========================
+   NEXT DEBUT COLOR SYSTEM
+   밝은 박스 / 글로우 제거 / 색상 고정
+========================= */
+
+#nextdebut .next-color-system{
+  display:grid !important;
+  grid-template-columns:1fr 1.05fr !important;
+  gap:30px !important;
+  align-items:stretch !important;
+
+  padding:38px !important;
+  border-radius:30px !important;
+
+  background:
+    linear-gradient(135deg,rgba(255,255,255,0.88),rgba(255,247,253,0.82)) !important;
+
+  border:1px solid rgba(201,139,195,0.26) !important;
+  box-shadow:0 24px 70px rgba(170,110,160,0.14) !important;
+  overflow:hidden !important;
+}
+
+/* NEXT DEBUT 글로우 완전 제거 */
+#nextdebut .next-color-system,
+#nextdebut .next-color-system *,
+#nextdebut .next-color-system::before,
+#nextdebut .next-color-system::after{
+  text-shadow:none !important;
+  filter:none !important;
+}
+
+#nextdebut .next-color-system::before,
+#nextdebut .next-color-system::after{
+  display:none !important;
+}
+
+/* NEXT DEBUT 텍스트 */
+#nextdebut .next-color-system .color-label{
+  color:#C98BC3 !important;
+}
+
+#nextdebut .next-color-system .color-text h3{
+  color:#C98BC3 !important;
+  font-size:32px !important;
+  line-height:1.35 !important;
+  font-weight:900 !important;
+  margin-bottom:22px !important;
+}
+
+#nextdebut .next-color-system .color-summary{
+  color:#5f4f5d !important;
+  font-size:15px !important;
+  line-height:1.85 !important;
+  margin-bottom:24px !important;
+}
+
+/* NEXT DEBUT 설명 박스 */
+#nextdebut .next-color-system .color-point{
+  background:rgba(255,255,255,0.66) !important;
+  border:1px solid rgba(201,139,195,0.22) !important;
+  border-radius:22px !important;
+  padding:22px !important;
+  box-shadow:0 14px 36px rgba(170,110,160,0.10) !important;
+}
+
+#nextdebut .next-color-system .color-point.main{
+  background:rgba(255,247,253,0.82) !important;
+}
+
+#nextdebut .next-color-system .color-point strong,
+#nextdebut .next-color-system .color-point b{
+  color:#C98BC3 !important;
+}
+
+#nextdebut .next-color-system .color-point strong{
+  font-size:21px !important;
+}
+
+#nextdebut .next-color-system .color-point b{
+  font-size:16px !important;
+}
+
+#nextdebut .next-color-system .color-point p{
+  color:#594a56 !important;
+  font-size:14px !important;
+  line-height:1.75 !important;
+}
+
+/* NEXT DEBUT 색상 바 */
+#nextdebut .next-color-system .color-bars{
+  display:grid !important;
+  grid-template-columns:repeat(5,1fr) !important;
+  gap:14px !important;
+}
+
+#nextdebut .next-color-system .color-bar{
+  position:relative !important;
+  height:500px !important;
+}
+
+#nextdebut .next-color-system .bar-fill{
+  width:100% !important;
+  height:100% !important;
+  border-radius:26px !important;
+  animation:none !important;
+  transform:none !important;
+  box-shadow:
+    inset 0 0 18px rgba(255,255,255,0.20),
+    0 16px 34px rgba(120,80,120,0.14) !important;
+}
+
+/* 색상 정확히 고정 */
+#nextdebut .next-color-system .color-bar:nth-child(1) .bar-fill{background:#C98BC3 !important;}
+#nextdebut .next-color-system .color-bar:nth-child(2) .bar-fill{background:#D8C2FF !important;}
+#nextdebut .next-color-system .color-bar:nth-child(3) .bar-fill{background:#F5D8EA !important;}
+#nextdebut .next-color-system .color-bar:nth-child(4) .bar-fill{background:#FFF7FD !important;}
+#nextdebut .next-color-system .color-bar:nth-child(5) .bar-fill{background:#24111F !important;}
+
+#nextdebut .next-color-system .color-bar span{
+  position:absolute !important;
+  left:50% !important;
+  bottom:16px !important;
+  transform:translateX(-50%) !important;
+
+  padding:8px 12px !important;
+  border-radius:999px !important;
+  background:rgba(40,25,38,0.72) !important;
+  color:#ffffff !important;
+
+  font-size:12px !important;
+  font-weight:900 !important;
+  white-space:nowrap !important;
+}
+
+/* hover 효과 제거 */
+#nextdebut .next-color-system .color-bar:hover .bar-fill{
+  transform:none !important;
+}
