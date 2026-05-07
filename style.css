@@ -1885,3 +1885,38 @@ section{
 
   line-height:1.9;
 }
+/* NEXT DEBUT Color System - 위 카드 스타일과 통일 */
+#nextdebut .next-color-system{
+  background:rgba(255,255,255,0.76) !important;
+  border:1px solid rgba(214,150,210,0.45) !important;
+  box-shadow:0 24px 70px rgba(170,110,160,0.22) !important;
+  border-radius:30px !important;
+}
+
+#nextdebut .next-color-system .color-label{
+  color:#b85f9d !important;
+}
+
+#nextdebut .next-color-system h3{
+  color:#b85f9d !important;
+  text-shadow:none !important;
+}
+
+#nextdebut .next-color-system .color-summary,
+#nextdebut .next-color-system .color-point p{
+  color:#4f3d4b !important;
+}
+
+#nextdebut .next-color-system .color-point{
+  background:rgba(255,255,255,0.55) !important;
+  border:1px solid rgba(214,150,210,0.35) !important;
+  box-shadow:none !important;
+}
+
+#nextdebut .next-color-system .color-point strong{
+  color:#b85f9d !important;
+}
+
+#nextdebut .next-color-system .color-point b{
+  color:#5a2f50 !important;
+}
