@@ -1165,25 +1165,21 @@ section{
   }
   
   #nextdebut .section-title{
-    color:#5a2f50 !important;
+    color:#7d3f74 !important;
   }
   
   #nextdebut .section-desc{
-    color:#6b5263 !important;
+    color:#6e5668 !important;
   }
   
   #nextdebut .content-box,
   #nextdebut .card,
   #nextdebut .result-box{
-    background:rgba(255,255,255,0.76) !important;
-    border:1px solid rgba(214,150,210,0.45) !important;
-    box-shadow:0 24px 70px rgba(170,110,160,0.22) !important;
-  }
+    background:rgba(255,255,255,0.88) !important;
+    border:1px solid rgba(214,150,210,0.35) !important;
   
-  #nextdebut .content-box h3,
-  #nextdebut .card h3,
-  #nextdebut .result-box h3{
-    color:#b85f9d !important;
+    box-shadow:
+      0 20px 50px rgba(210,170,205,0.18) !important;
   }
   
   #nextdebut .content-box p,
@@ -1199,8 +1195,13 @@ section{
   }
   
   #nextdebut .next-visual{
-    border-color:rgba(214,150,210,0.5) !important;
-    box-shadow:0 28px 80px rgba(170,110,160,0.24) !important;
+    background:#f8e8f5 !important;
+  
+    border:1px solid rgba(214,150,210,0.38) !important;
+  
+    box-shadow:
+      0 20px 60px rgba(214,150,210,0.18),
+      inset 0 0 20px rgba(255,255,255,0.28) !important;
   }
   
   #nextdebut .next-visual strong{
@@ -1228,32 +1229,36 @@ section{
     position:relative;
     overflow:hidden;
     padding-top:clamp(420px, 38vh, 620px) !important;
+  
     background:
       linear-gradient(
         180deg,
-        #3a202f 0%,
-        #6f3f66 22%,
-        #aa78a5 48%,
-        #e4c5e2 74%,
-        #fff7fb 100%
+        #d9b8d4 0%,
+        #e8cfe6 18%,
+        #f3dff0 42%,
+        #f9edf7 68%,
+        #fff9fc 100%
       ) !important;
+  
     color:#4a3042 !important;
   }
   
+  /* 전체 밝은 오버레이 */
   #nextdebut.project-section.game::before{
     content:"";
     position:absolute;
     inset:0;
-    pointer-events:none;
     z-index:1;
+    pointer-events:none;
+  
     background:
+      radial-gradient(circle at 20% 20%, rgba(255,255,255,0.45), transparent 32%),
+      radial-gradient(circle at 80% 30%, rgba(255,220,245,0.38), transparent 30%),
       linear-gradient(
         180deg,
-        rgba(255,247,251,0) 0%,
-        rgba(255,210,238,calc(var(--scroll-progress) * 0.32)) 45%,
-        rgba(255,247,251,calc(var(--scroll-progress) * 0.58)) 100%
+        rgba(255,255,255,0.12) 0%,
+        rgba(255,255,255,0.22) 100%
       );
-    transition:background 0.12s linear;
   }
   
   #nextdebut .wrap{
