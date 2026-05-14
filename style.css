@@ -2153,3 +2153,67 @@ section{
       #fffafd 100%
     ) !important;
 }
+
+/* =========================
+   VEROTIO → NEXT DEBUT 자연스러운 그라데이션
+========================= */
+
+#verotio.project-section.verotio{
+  position:relative !important;
+  overflow:hidden !important;
+  padding-bottom:520px !important;
+
+  background:
+    linear-gradient(
+      180deg,
+      #050505 0%,
+      #160d09 42%,
+      #2b1622 62%,
+      #5e3a55 78%,
+      #a77ca0 90%,
+      #ecd7e9 100%
+    ) !important;
+}
+
+#verotio.project-section.verotio::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-2px;
+  height:620px;
+  z-index:1;
+  pointer-events:none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(22,13,9,0) 0%,
+      rgba(58,32,47,0.25) 22%,
+      rgba(120,78,112,0.45) 44%,
+      rgba(196,156,190,0.72) 70%,
+      #f2e1ef 100%
+    );
+}
+
+#verotio .wrap{
+  position:relative;
+  z-index:2;
+}
+
+#nextdebut.project-section.game{
+  position:relative !important;
+  margin-top:-260px !important;
+  padding-top:560px !important;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f2e1ef 0%,
+      #f6e9f4 22%,
+      #fbf4fa 55%,
+      #fffafd 100%
+    ) !important;
+
+  color:#4a3042 !important;
+}
