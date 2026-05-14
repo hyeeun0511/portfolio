@@ -2155,93 +2155,49 @@ section{
 }
 
 /* =========================
-   VEROTIO → NEXT DEBUT SMOOTH FINAL
-   섹션 경계선 제거
+   VEROTIO → NEXT DEBUT REAL FINAL
+   흰 띠 제거 / 자연 연결
 ========================= */
 
+/* 기존 흰 띠 만드는 오버레이 제거 */
+#nextdebut.project-section.game::before,
+#nextdebut.project-section.game::after{
+  display:none !important;
+  content:none !important;
+}
+
+/* 컵홀더 섹션 하단을 길게 연핑크로 연결 */
 #verotio.project-section.verotio{
   position:relative !important;
-  overflow:visible !important;
-  padding-bottom:620px !important;
+  overflow:hidden !important;
+  padding-bottom:360px !important;
 
   background:
     linear-gradient(
       180deg,
       #050505 0%,
       #160d09 42%,
-      #2c1726 68%,
-      #6d4963 84%,
-      #b992b2 94%,
-      #ead8e8 100%
+      #2a1623 66%,
+      #5d3854 82%,
+      #9f7498 93%,
+      #d8bfd3 100%
     ) !important;
 }
 
-/* 컵홀더 하단에서 밝아지는 긴 오버레이 */
-#verotio.project-section.verotio::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:-360px;
-  height:780px;
-  z-index:1;
-  pointer-events:none;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(22,13,9,0) 0%,
-      rgba(72,42,65,0.35) 24%,
-      rgba(145,104,137,0.62) 48%,
-      rgba(218,194,216,0.9) 76%,
-      #f6edf5 100%
-    );
-}
-
-#verotio .wrap{
-  position:relative;
-  z-index:2;
-}
-
+/* next debut 시작 배경 */
 #nextdebut.project-section.game{
   position:relative !important;
-  margin-top:-360px !important;
-  padding-top:620px !important;
+  margin-top:0 !important;
+  padding-top:220px !important;
 
   background:
     linear-gradient(
       180deg,
-      #f6edf5 0%,
-      #f7edf6 22%,
-      #fbf5fa 58%,
-      #fffafd 100%
+      #d8bfd3 0%,
+      #e8d2e5 22%,
+      #f4e7f2 52%,
+      #fff9fc 100%
     ) !important;
 
   color:#4a3042 !important;
-}
-
-/* NEXT DEBUT 위쪽 경계선 덮기 */
-#nextdebut.project-section.game::before{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  top:-360px;
-  height:520px;
-  z-index:1;
-  pointer-events:none;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(185,146,178,0) 0%,
-      rgba(220,196,218,0.65) 38%,
-      #f6edf5 78%,
-      #f6edf5 100%
-    ) !important;
-}
-
-#nextdebut .wrap{
-  position:relative;
-  z-index:2;
 }
