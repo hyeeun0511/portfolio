@@ -2127,3 +2127,25 @@ section{
   display:none !important;
   content:none !important;
 }
+/* ===== NEXT DEBUT 전용 핑크/라벤더 컬러 통일 ===== */
+
+#nextdebut .package-title span,
+#nextdebut .next-result-desc span,
+#nextdebut .content-box h3,
+#nextdebut .result-box h3,
+#nextdebut .color-label{
+  color:#c98bc3 !important;
+}
+
+#nextdebut .flow-item{
+  color:#b06aa8 !important;
+  border-color:rgba(201,139,195,0.38) !important;
+}
+
+#nextdebut .next-link{
+  color:#b06aa8 !important;
+}
+
+#nextdebut .project-num{
+  color:#d889ca !important;
+}
