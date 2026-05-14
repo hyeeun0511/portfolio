@@ -1671,25 +1671,19 @@ section{
 /* NEXT DEBUT 설명 글씨 밝게 */
 #nextdebut .section-desc,
 #nextdebut .portfolio-notice{
-  color:#ffffff !important;
+  color:#5d3b5d !important;
 
-  text-shadow:
-    0 2px 10px rgba(0,0,0,0.35),
-    0 0 20px rgba(255,220,245,0.18);
+  text-shadow:none !important;
 
   opacity:1 !important;
 }
 
-/* 안내문 가독성 */
-#nextdebut .portfolio-notice{
-  font-weight:700 !important;
-  line-height:1.8;
+#nextdebut .next-link-row .portfolio-notice{
+  color:#5d3b5d !important;
 }
 
-/* section 설명 */
 #nextdebut .section-desc{
-  font-size:20px;
-  font-weight:700;
+  color:#6a4568 !important;
 }
 /* ===== NEXT DEBUT FLOW ALIGN FIX ===== */
 
