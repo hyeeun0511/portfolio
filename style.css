@@ -2149,3 +2149,17 @@ section{
 #nextdebut .project-num{
   color:#d889ca !important;
 }
+/* ===== NEXT DEBUT 밝은 배경 복구 ===== */
+
+#nextdebut.project-section.game{
+  margin-top:0 !important;
+  padding-top:140px !important;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f5edf4 0%,
+      #f8eef7 22%,
+      #fff7fd 100%
+    ) !important;
+}
