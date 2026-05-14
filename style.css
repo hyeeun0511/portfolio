@@ -1160,35 +1160,21 @@ section{
 /* ===== NEXT DEBUT / MOM'S LOG 밝은 톤 최종 ===== */
 
   
-  #momslog.project-section.pink{
-    background:
-      radial-gradient(circle at 25% 20%, rgba(255,210,232,0.65), transparent 36%),
-      radial-gradient(circle at 80% 65%, rgba(226,211,255,0.58), transparent 40%),
-      linear-gradient(180deg, #f5ecff 0%, #fff8fc 100%) !important;
-    color:#4a3042 !important;
-  }
-  
-  #nextdebut .project-num,
-  #momslog .project-num{
+  #nextdebut .project-num{
     color:#d978b6 !important;
   }
   
-  #nextdebut .section-title,
-  #momslog .section-title{
+  #nextdebut .section-title{
     color:#5a2f50 !important;
   }
   
-  #nextdebut .section-desc,
-  #momslog .section-desc{
+  #nextdebut .section-desc{
     color:#6b5263 !important;
   }
   
   #nextdebut .content-box,
   #nextdebut .card,
-  #nextdebut .result-box,
-  #momslog .content-box,
-  #momslog .card,
-  #momslog .result-box{
+  #nextdebut .result-box{
     background:rgba(255,255,255,0.76) !important;
     border:1px solid rgba(214,150,210,0.45) !important;
     box-shadow:0 24px 70px rgba(170,110,160,0.22) !important;
@@ -1196,19 +1182,13 @@ section{
   
   #nextdebut .content-box h3,
   #nextdebut .card h3,
-  #nextdebut .result-box h3,
-  #momslog .content-box h3,
-  #momslog .card h3,
-  #momslog .result-box h3{
+  #nextdebut .result-box h3{
     color:#b85f9d !important;
   }
   
   #nextdebut .content-box p,
   #nextdebut .card p,
-  #nextdebut .result-box p,
-  #momslog .content-box p,
-  #momslog .card p,
-  #momslog .result-box p{
+  #nextdebut .result-box p{
     color:#4f3d4b !important;
   }
   
@@ -1319,11 +1299,6 @@ section{
   
   .nav a{
     color:color-mix(in srgb, #dddddd calc(100% - var(--scroll-progress) * 100%), #6a3b5e calc(var(--scroll-progress) * 100%)) !important;
-  }
-  #momslog,
-  #momslog *{
-    filter:none !important;
-    opacity:1 !important;
   }
   .next-link{
     display:inline-flex;
