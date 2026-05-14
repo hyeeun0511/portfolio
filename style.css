@@ -1966,3 +1966,113 @@ section{
 #nextdebut .next-color-system .color-point p{
   color:#4F3D4B !important;
 }
+/* =========================
+   NEXT DEBUT RESULT SHOWCASE
+========================= */
+
+.next-debut-showcase{
+  margin-top:64px;
+  display:flex;
+  flex-direction:column;
+  gap:34px;
+}
+
+.next-debut-showcase .package-title span{
+  color:#C98BC3 !important;
+}
+
+.next-debut-showcase .package-title h3{
+  color:#5a2f50 !important;
+}
+
+.next-result-row{
+  display:grid;
+  grid-template-columns:1.05fr 0.95fr;
+  gap:28px;
+  align-items:center;
+  padding:24px;
+  border-radius:28px;
+  background:rgba(255,255,255,0.76);
+  border:1px solid rgba(214,150,210,0.45);
+  box-shadow:0 24px 70px rgba(170,110,160,0.22);
+}
+
+.next-result-row.reverse .next-result-image{
+  order:2;
+}
+
+.next-result-row.reverse .next-result-desc{
+  order:1;
+}
+
+.next-result-image{
+  max-width:520px;
+  min-height:320px;
+  margin:0 auto;
+  border-radius:22px;
+  overflow:hidden;
+  background:#fff7fd;
+  border:1px solid rgba(201,139,195,0.25);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.next-result-image img{
+  width:100%;
+  height:auto;
+  max-height:520px;
+  object-fit:contain;
+  object-position:center;
+  display:block;
+  transition:none;
+}
+
+.next-result-desc span{
+  display:inline-block;
+  margin-bottom:10px;
+  color:#C98BC3;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:2.5px;
+}
+
+.next-result-desc h4{
+  font-size:26px;
+  margin-bottom:14px;
+  color:#5a2f50;
+}
+
+.next-result-desc p{
+  color:#4f3d4b;
+  font-size:16px;
+  line-height:1.85;
+}
+
+/* hover 시 박스 움직임 없이 이미지도 고정 */
+.next-result-row:hover,
+.next-result-row:hover .next-result-image img{
+  transform:none !important;
+  box-shadow:0 24px 70px rgba(170,110,160,0.22) !important;
+  filter:none !important;
+}
+
+@media(max-width:900px){
+  .next-result-row,
+  .next-result-row.reverse{
+    grid-template-columns:1fr;
+  }
+
+  .next-result-row.reverse .next-result-image,
+  .next-result-row.reverse .next-result-desc{
+    order:initial;
+  }
+
+  .next-result-image{
+    min-height:auto;
+  }
+
+  .next-result-desc h4{
+    font-size:22px;
+  }
+}

@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
       updateGradientTransition();
 
       const revealItems = document.querySelectorAll(
-        "#profile .section-title, #profile .section-desc, #profile .card, #profile .profile-image-box, #monkit .split, #monkit .detail-grid, #monkit .color-system-box, #monkit .package-showcase, #verotio .split, #verotio .detail-grid, #verotio .result-box, #verotio .cup-holder-showcase, #verotio .color-system-box, #nextdebut .split, #nextdebut .flow, #nextdebut .detail-grid, #nextdebut .result-box"
+        "#profile .section-title, #profile .section-desc, #profile .card, #profile .profile-image-box, #monkit .split, #monkit .detail-grid, #monkit .color-system-box, #monkit .package-showcase, #verotio .split, #verotio .detail-grid, #verotio .result-box, #verotio .cup-holder-showcase, #verotio .color-system-box, #nextdebut .split, #nextdebut .flow, #nextdebut .detail-grid, #nextdebut .result-box, #nextdebut .next-debut-showcase"
       );
     
       revealItems.forEach((item, index) => {
